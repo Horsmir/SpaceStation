@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://textures/cel.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Ui.gd" type="Script" id=2]
+[ext_resource path="res://ui/PauseMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/EnvInfoDialog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/InventoryControl.tscn" type="PackedScene" id=5]
+
+[node name="Ui" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hud" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Hud"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -176.0
+margin_top = -86.0
+text = "Ammo
+2/2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InteractionLabel" type="Label" parent="Hud"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -14.0
+text = "Press E to interact"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cel" type="TextureRect" parent="Hud"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -16.0
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryControl" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="EnvInfoDialog" parent="." instance=ExtResource( 4 )]
+[connection signal="popup_hide" from="EnvInfoDialog" to="." method="_on_EnvInfoDialog_popup_hide"]

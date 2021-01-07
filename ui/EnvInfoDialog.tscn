@@ -1,0 +1,569 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/style/emoji_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/EnvInfoDialog.gd" type="Script" id=2]
+
+[node name="EnvInfoDialog" type="WindowDialog"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -377.0
+margin_top = -231.0
+margin_right = 377.0
+margin_bottom = 231.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntoModule" type="VBoxContainer" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ParamPanel" type="VBoxContainer" parent="TabContainer/IntoModule"]
+margin_right = 746.0
+margin_bottom = 126.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/IntoModule/ParamPanel"]
+margin_right = 746.0
+margin_bottom = 22.0
+
+[node name="Label" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer"]
+margin_top = 4.0
+margin_right = 27.0
+margin_bottom = 18.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "O2: "
+
+[node name="O2Perc" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer"]
+margin_left = 31.0
+margin_top = 4.0
+margin_right = 59.0
+margin_bottom = 18.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="O2Dyn" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer"]
+margin_left = 63.0
+margin_top = -1.0
+margin_right = 87.0
+margin_bottom = 21.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/IntoModule/ParamPanel"]
+margin_top = 26.0
+margin_right = 746.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer2"]
+margin_top = 4.0
+margin_right = 35.0
+margin_bottom = 18.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "CO2: "
+
+[node name="CO2Perc" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer2"]
+margin_left = 39.0
+margin_top = 4.0
+margin_right = 67.0
+margin_bottom = 18.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CO2Dyn" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer2"]
+margin_left = 71.0
+margin_top = -1.0
+margin_right = 95.0
+margin_bottom = 21.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/IntoModule/ParamPanel"]
+margin_top = 52.0
+margin_right = 746.0
+margin_bottom = 74.0
+
+[node name="Label" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer3"]
+margin_top = 4.0
+margin_right = 90.0
+margin_bottom = 18.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Temperature: "
+
+[node name="Temp" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer3"]
+margin_left = 94.0
+margin_top = 4.0
+margin_right = 128.0
+margin_bottom = 18.0
+text = "00 °C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TempDyn" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer3"]
+margin_left = 132.0
+margin_top = -1.0
+margin_right = 156.0
+margin_bottom = 21.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/IntoModule/ParamPanel"]
+margin_top = 78.0
+margin_right = 746.0
+margin_bottom = 100.0
+
+[node name="Label" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer4"]
+margin_top = 4.0
+margin_right = 67.0
+margin_bottom = 18.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Humidity: "
+
+[node name="Humid" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer4"]
+margin_left = 71.0
+margin_top = 4.0
+margin_right = 99.0
+margin_bottom = 18.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HumidDyn" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer4"]
+margin_left = 103.0
+margin_top = -1.0
+margin_right = 127.0
+margin_bottom = 21.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/IntoModule/ParamPanel"]
+margin_top = 104.0
+margin_right = 746.0
+margin_bottom = 126.0
+
+[node name="Label" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer5"]
+margin_top = 4.0
+margin_right = 64.0
+margin_bottom = 18.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Pressure: "
+
+[node name="Pressure" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer5"]
+margin_left = 68.0
+margin_top = 4.0
+margin_right = 139.0
+margin_bottom = 18.0
+text = "00  mm Hg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressureDyn" type="Label" parent="TabContainer/IntoModule/ParamPanel/HBoxContainer5"]
+margin_left = 143.0
+margin_top = -1.0
+margin_right = 167.0
+margin_bottom = 21.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="ErrorPanel" type="HBoxContainer" parent="TabContainer/IntoModule"]
+visible = false
+margin_top = 130.0
+margin_right = 746.0
+margin_bottom = 426.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="TabContainer/IntoModule/ErrorPanel"]
+margin_right = 746.0
+margin_bottom = 296.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "No Data"
+align = 1
+valign = 1
+
+[node name="OutModule" type="VBoxContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ParamPanel" type="VBoxContainer" parent="TabContainer/OutModule"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/OutModule/ParamPanel"]
+margin_right = 746.0
+margin_bottom = 25.0
+
+[node name="Label" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer"]
+margin_right = 44.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "O2: "
+
+[node name="O2Perc" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer"]
+margin_left = 48.0
+margin_right = 94.0
+margin_bottom = 25.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="O2Dyn" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer"]
+margin_left = 98.0
+margin_top = 1.0
+margin_right = 122.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/OutModule/ParamPanel"]
+margin_top = 29.0
+margin_right = 746.0
+margin_bottom = 54.0
+
+[node name="Label" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer2"]
+margin_right = 62.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "CO2: "
+
+[node name="CO2Perc" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer2"]
+margin_left = 66.0
+margin_right = 112.0
+margin_bottom = 25.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CO2Dyn" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer2"]
+margin_left = 116.0
+margin_top = 1.0
+margin_right = 140.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/OutModule/ParamPanel"]
+margin_top = 58.0
+margin_right = 746.0
+margin_bottom = 83.0
+
+[node name="Label" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer3"]
+margin_right = 150.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Temperature: "
+
+[node name="Temp" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer3"]
+margin_left = 154.0
+margin_right = 220.0
+margin_bottom = 25.0
+text = "00 °C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TempDyn" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer3"]
+margin_left = 224.0
+margin_top = 1.0
+margin_right = 248.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/OutModule/ParamPanel"]
+margin_top = 87.0
+margin_right = 746.0
+margin_bottom = 112.0
+
+[node name="Label" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer4"]
+margin_right = 113.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Humidity: "
+
+[node name="Humid" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer4"]
+margin_left = 117.0
+margin_right = 163.0
+margin_bottom = 25.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HumidDyn" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer4"]
+margin_left = 167.0
+margin_top = 1.0
+margin_right = 191.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/OutModule/ParamPanel"]
+margin_top = 116.0
+margin_right = 746.0
+margin_bottom = 141.0
+
+[node name="Label" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer5"]
+margin_right = 103.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Pressure: "
+
+[node name="Pressure" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer5"]
+margin_left = 107.0
+margin_right = 227.0
+margin_bottom = 25.0
+text = "00  mm Hg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressureDyn" type="Label" parent="TabContainer/OutModule/ParamPanel/HBoxContainer5"]
+margin_left = 231.0
+margin_top = 1.0
+margin_right = 255.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="ErrorPanel" type="HBoxContainer" parent="TabContainer/OutModule"]
+visible = false
+margin_top = 280.0
+margin_right = 746.0
+margin_bottom = 426.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="TabContainer/OutModule/ErrorPanel"]
+margin_right = 746.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "No Data"
+align = 1
+valign = 1
+
+[node name="Overboard" type="VBoxContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ParamPanel" type="VBoxContainer" parent="TabContainer/Overboard"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overboard/ParamPanel"]
+margin_right = 746.0
+margin_bottom = 25.0
+
+[node name="Label" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer"]
+margin_right = 44.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "O2: "
+
+[node name="O2Perc" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer"]
+margin_left = 48.0
+margin_right = 94.0
+margin_bottom = 25.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="O2Dyn" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer"]
+margin_left = 98.0
+margin_top = 1.0
+margin_right = 122.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Overboard/ParamPanel"]
+margin_top = 29.0
+margin_right = 746.0
+margin_bottom = 54.0
+
+[node name="Label" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer2"]
+margin_right = 62.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "CO2: "
+
+[node name="CO2Perc" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer2"]
+margin_left = 66.0
+margin_right = 112.0
+margin_bottom = 25.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CO2Dyn" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer2"]
+margin_left = 116.0
+margin_top = 1.0
+margin_right = 140.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Overboard/ParamPanel"]
+margin_top = 58.0
+margin_right = 746.0
+margin_bottom = 83.0
+
+[node name="Label" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer3"]
+margin_right = 150.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Temperature: "
+
+[node name="Temp" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer3"]
+margin_left = 154.0
+margin_right = 220.0
+margin_bottom = 25.0
+text = "00 °C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TempDyn" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer3"]
+margin_left = 224.0
+margin_top = 1.0
+margin_right = 248.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/Overboard/ParamPanel"]
+margin_top = 87.0
+margin_right = 746.0
+margin_bottom = 112.0
+
+[node name="Label" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer4"]
+margin_right = 113.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Humidity: "
+
+[node name="Humid" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer4"]
+margin_left = 117.0
+margin_right = 163.0
+margin_bottom = 25.0
+text = "00%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HumidDyn" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer4"]
+margin_left = 167.0
+margin_top = 1.0
+margin_right = 191.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/Overboard/ParamPanel"]
+margin_top = 116.0
+margin_right = 746.0
+margin_bottom = 141.0
+
+[node name="Label" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer5"]
+margin_right = 103.0
+margin_bottom = 25.0
+hint_tooltip = "Oxygen percentage"
+mouse_filter = 1
+text = "Pressure: "
+
+[node name="Pressure" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer5"]
+margin_left = 107.0
+margin_right = 227.0
+margin_bottom = 25.0
+text = "00  mm Hg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressureDyn" type="Label" parent="TabContainer/Overboard/ParamPanel/HBoxContainer5"]
+margin_left = 231.0
+margin_top = 1.0
+margin_right = 255.0
+margin_bottom = 23.5882
+mouse_filter = 1
+custom_fonts/font = ExtResource( 1 )
+text = "⬆"
+
+[node name="ErrorPanel" type="HBoxContainer" parent="TabContainer/Overboard"]
+visible = false
+margin_top = 280.0
+margin_right = 746.0
+margin_bottom = 426.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="TabContainer/Overboard/ErrorPanel"]
+margin_right = 746.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "No Data"
+align = 1
+valign = 1
